@@ -61,7 +61,7 @@ Token 过期后调用会返回 401 或 403 错误。更新方法：重新申请 
 
 | 参数名 | 类型 | 必填 | 描述 |
 |--------|------|------|------|
-| ocrType | string | 是 | 识别类型枚举。必须为以下之一：<br>• GENERAL（通用文字）<br>• ID_CARD（大陆身份证）<br>• BANK_CARD（银行卡）<br>• BUSINESS_LICENSE（营业执照）<br>• VAT_INVOICE（增值税发票）<br>• VAT_ROLL_INVOICE（增值税卷票）<br>• TAXI_INVOICE（出租车发票）<br>• TRAIN_TICKET（火车票）<br>• AIRPORT_TICKET（航空运输电子客票行程单）<br>• VEHICLE_SALE_INVOICE（机动车销售统一发票） |
+| ocrType | string | 是 | 识别类型枚举。必须为以下之一：<br>• ID_CARD（大陆身份证）<br>• BANK_CARD（银行卡）<br>• SOCIAL_SECURITY_CARD（社保卡）<br>• HOUSEHOLD_REGISTER（户口本）<br>• BIRTH_CERTIFICATE（出生医学证明）<br>• HK_MACAU_PASS（往来港澳通行证）<br>• TAIWAN_PASS（往来台湾通行证）<br>• HK_MAINLAND_PASS（港澳居民来往内地通行证）<br>• TAIWAN_RESIDENT_PASS（台湾居民来往大陆通行证） |
 | filePath | string | 是 | 待识别图片的本地绝对路径。支持 jpg、png、pdf 等常见格式。 |
 
 ### 命令行调用示例
