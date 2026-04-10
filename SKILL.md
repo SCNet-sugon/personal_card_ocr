@@ -1,5 +1,5 @@
 ---
-name: personal-card-ocr
+name: personal_card_ocr
 description: 将图片中的文字、身份证、银行卡、社保卡、户口本、出生医学证明、往来港澳通行证、往来台湾通行证、台湾居民来往大陆通行证、港澳居民来往内地通行证等信息识别并提取出来。本技能应在用户需要 OCR 识别图片中的文字，或识别身份证、银行卡、社保卡、户口本、出生医学证明、往来港澳通行证、往来台湾通行证、台湾居民来往大陆通行证、港澳居民来往内地通行证时使用。
 version: 1.0.0
 author: SCNet
@@ -14,7 +14,7 @@ input:
   - filePath : 待识别图片的本地路径
 output: 结构化的 JSON 数据，包含识别结果和置信度
 ---
-# personal-card-ocr OCR 技能
+# personal_card_ocr OCR 技能
 
 本技能封装了个人证照识别的 OCR 服务，通过单一接口即可调用 9 种识别能力，高效提取居民身份证、银行卡、社保卡、户口本、出生医学证明、往来港澳通行证、往来台湾通行证、台湾居民来往大陆通行证、港澳居民来往内地通行证等，核心信息。
 
@@ -67,7 +67,7 @@ Token 过期后调用会返回 401 或 403 错误。更新方法：重新申请 
 ### 命令行调用示例
 
 ```bash
-python .claude/skills/personal-card-ocr/scripts/main.py ID_CARD /path/to/invoice.jpg
+python .claude/skills/personal_card_ocr/scripts/main.py ID_CARD /path/to/invoice.jpg
 ```
 
 ### 在 AI 对话中使用

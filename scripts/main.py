@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-Sugon-Scnet 通用 OCR 技能主脚本
+Sugon-Scnet 个人证照识别 OCR 技能主脚本
 接收命令行参数：ocrType filePath
 输出：识别结果的 JSON
 """

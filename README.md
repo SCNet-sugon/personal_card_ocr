@@ -1,4 +1,4 @@
-# personal-card-ocr
+# personal_card_ocr
 
 
 
@@ -15,7 +15,7 @@ Already a pro? Just edit this README.md and make it your own. Want to make it ea
 
 ```
 cd existing_repo
-git remote add origin https://github.com/SCNet-sugon/personal-card-ocr.git
+git remote add origin https://github.com/SCNet-sugon/personal_card_ocr.git
 git branch -M main
 git push -uf origin main
 ```
