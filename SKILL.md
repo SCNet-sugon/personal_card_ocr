@@ -1,7 +1,7 @@
 ---
 name: personal_card_ocr
-description: 将图片中的文字、身份证、银行卡、社保卡、户口本、出生医学证明、往来港澳通行证、往来台湾通行证、台湾居民来往大陆通行证、港澳居民来往内地通行证等信息识别并提取出来。本技能应在用户需要 OCR 识别图片中的文字，或识别身份证、银行卡、社保卡、户口本、出生医学证明、往来港澳通行证、往来台湾通行证、台湾居民来往大陆通行证、港澳居民来往内地通行证时使用。
-version: 1.0.3
+description: 将图片中的文字、身份证、银行卡、社保卡、户口本、出生医学证明、往来港澳通行证、往来台湾通行证、台湾居民来往大陆通行证、港澳居民来往内地通行证等信息识别并提取出来。本技能应在用户需要 OCR 识别图片中的文字，或识别身份证、银行卡、社保卡、户口本、出生医学证明、往来港澳通行证、往来台湾通行证、台湾居民来往大陆通行证、港澳居民来往内地通行证,中国香港身份证，外国人永久居留身份证，结婚证，不动产权证书，机动车行驶证正页，机动车行驶证副页，机动车驾驶证正页，机动车驾驶证副页，中国护照，学历证书，学历证书电子注册备案表，学位证书时使用。
+version: 1.0.4
 author: SCNet
 license: MIT
 tags:
@@ -24,11 +24,11 @@ output: 结构化的 JSON 数据，包含识别结果和置信度
 ---
 # Sugon-Scnet 个人证照识别 OCR 技能
 
-本技能封装了个人证照识别的 OCR 服务，通过单一接口即可调用 9 种识别能力，高效提取居民身份证、银行卡、社保卡、户口本、出生医学证明、往来港澳通行证、往来台湾通行证、台湾居民来往大陆通行证、港澳居民来往内地通行证等，核心信息。
+本技能封装了个人证照识别的 OCR 服务，通过单一接口即可调用 21 种识别能力，高效提取居民身份证、银行卡、社保卡、户口本、出生医学证明、往来港澳通行证、往来台湾通行证、台湾居民来往大陆通行证、港澳居民来往内地通行证,中国香港身份证，外国人永久居留身份证，结婚证，不动产权证书，机动车行驶证正页，机动车行驶证副页，机动车驾驶证正页，机动车驾驶证副页，中国护照，学历证书，学历证书电子注册备案表，学位证书等，核心信息。
 
 ## 功能特性
 
-- **个人证照识别**：支持识别多种个人证件，包括居民身份证、银行卡、社保卡、户口本、出生医学证明、往来港澳通行证、往来台湾通行证、台湾居民来往大陆通行证、港澳居民来往内地通行证等，自动提取证件核心信息。
+- **个人证照识别**：支持识别多种个人证件，包括居民身份证、银行卡、社保卡、户口本、出生医学证明、往来港澳通行证、往来台湾通行证、台湾居民来往大陆通行证、港澳居民来往内地通行证,中国香港身份证，外国人永久居留身份证，结婚证，不动产权证书，机动车行驶证正页，机动车行驶证副页，机动车驾驶证正页，机动车驾驶证副页，中国护照，学历证书，学历证书电子注册备案表，学位证书等，自动提取证件核心信息。
 
 
 ## 前置配置
@@ -75,7 +75,7 @@ Token 过期后调用会返回 401 或 403 错误。更新方法：重新申请 
 
 | 参数名 | 类型 | 必填 | 描述 |
 |--------|------|------|------|
-| ocrType | string | 是 | 识别类型枚举。必须为以下之一：<br>• ID_CARD（大陆身份证）<br>• BANK_CARD（银行卡）<br>• SOCIAL_SECURITY_CARD（社保卡）<br>• HOUSEHOLD_REGISTER（户口本）<br>• BIRTH_CERTIFICATE（出生医学证明）<br>• HK_MACAU_PASS（往来港澳通行证）<br>• TAIWAN_PASS（往来台湾通行证）<br>• HK_MAINLAND_PASS（港澳居民来往内地通行证）<br>• TAIWAN_RESIDENT_PASS（台湾居民来往大陆通行证） |
+| ocrType | string | 是 | 识别类型枚举。必须为以下之一：<br>• ID_CARD（大陆身份证）<br>• BANK_CARD（银行卡）<br>• SOCIAL_SECURITY_CARD（社保卡）<br>• HOUSEHOLD_REGISTER（户口本）<br>• BIRTH_CERTIFICATE（出生医学证明）<br>• HK_MACAU_PASS（往来港澳通行证）<br>• TAIWAN_PASS（往来台湾通行证）<br>• TAIWAN_MAINLAND_PASS（台湾居民来往大陆通行证）<br>• HK_MAINLAND_PASS（港澳居民来往内地通行证）<br>• HONG_KONG_IDENTITY_CARD（中国香港身份证）<br>• PERMANENT_RESIDENCE_ID_CARD_FOR（外国人永久居留身份证）<br>• MARRIAGE_CERTIFICATE（结婚证）<br>• REAL_ESTATE_OWNERSHIP_CERTIFICAT（不动产权证书）<br>• FRONT_PAGE_OF_MOTOR_VEHICLE_DRIV（机动车行驶证正页）<br>• SECOND_SHEET_OF_MOTOR_VEHICLE_DR（机动车行驶证副页）<br>• MOTOR_VEHICLE_DRIVING_LICENSE（机动车驾驶证正页）<br>• MOTOR_VEHICLE_DRIVING_LICENSE_SU（机动车驾驶证副页）<br>• CHINESE_PASSPORT（中国护照）<br>• ACADEMIC_CERTIFICATE（学历证书）<br>• ONLINE_VERIFICATION_REPORT_OF_HE（学历证书电子注册备案表）<br>• DIPLOMA（学位证书） |
 | filePath | string | 是 | 待识别图片的本地绝对路径。支持 jpg、png、pdf 等常见格式。 |
 
 ### 命令行调用示例
